@@ -13,7 +13,7 @@ function WeatherCard(props) {
   }
 
   return (
-    <div className={"card"} style={{ maxWidth: "250px", minWidth: "200px" }}>
+    <div className={"card"} style={{ width: "300px" }}>
       <div className='card-header'>
         <h3>
           <strong> {props.city} </strong> <sup> {props.country} </sup>{" "}
