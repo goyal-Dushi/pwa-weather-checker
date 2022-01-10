@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { getWeather } from "./api/fetchWeather";
 import WeatherCard from "./components/weatherCard";
-import Sun from "./images/sun.png";
-import Moon from "./images/moon.png";
+import Sun from "./images/sun.webp";
+import Moon from "./images/moon.webp";
 
 function App() {
   const [cityName, setName] = useState("");
