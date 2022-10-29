@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getWeather = async (cityName) => {
-  const data = await axios
+  return await axios
     .get(process.env.REACT_APP_WEATHER_API, {
       params: {
         q: cityName,
@@ -9,6 +9,5 @@ export const getWeather = async (cityName) => {
         units: "metric",
       },
     })
-    .then((res) => res.data);
-  return data;
+    .then((res) => res.data).catch((err) => Promise.reject(err.response.data));
 };
