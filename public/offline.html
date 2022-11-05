@@ -27,15 +27,11 @@
     <meta name="theme-color" content="#ffffff" />
     <style>
       body {
+        position: relative;
+        height: 100vh;
         margin: 0;
         padding: 0;
-        height: 100vh;
-        width: 100%;
-        position: relative;
         box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background-color: black;
       }
       .offline-head {
@@ -43,6 +39,15 @@
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         font-weight: 600;
         color: white;
+        text-align: center;
+      }
+      main{
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       footer {
         position: absolute;
@@ -53,14 +58,19 @@
         flex-direction: column;
         background-color: white;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+      }
+      h3{
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <h1 class="offline-head">
-      Please go online for the Application to work. Thank you :)
-    </h1>
+    <main>
+      <h1 class="offline-head">
+        Please go online for the Application to work. Thank you :)
+      </h1>
+    </main> 
     <footer>
       <div><h3>Dushyant Goyal</h3></div>
       <div><span class="date"> </span></div>
@@ -72,7 +82,7 @@
       var dd = String(date.getDate()).padStart(2, "0");
       var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
       var yyyy = date.getFullYear();
-      date = mm + "/" + dd + "/" + yyyy;
+      date = dd + "/" + mm + "/" + yyyy;
       showDate.innerHTML = date;
     </script>
   </body>
